@@ -1,3 +1,4 @@
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -14,3 +15,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "New Voice Typing"
 include ':app'
+include ':YFinapplibraryV4'
+include ':lib'

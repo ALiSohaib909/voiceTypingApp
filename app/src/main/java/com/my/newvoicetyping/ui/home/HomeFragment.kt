@@ -1,7 +1,10 @@
 package com.my.newvoicetyping.ui.home
 
+
+
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.Intent.getIntent
 import android.os.Bundle
 import android.provider.Settings
 import android.view.LayoutInflater
@@ -13,8 +16,6 @@ import androidx.navigation.fragment.findNavController
 import com.my.newvoicetyping.MySharedPreferences
 import com.my.newvoicetyping.R
 import com.my.newvoicetyping.databinding.FragmentHomeBinding
-
-
 import com.my.newvoicetyping.keyboard.PreferenceActivity_voicetyping
 
 
@@ -37,6 +38,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         navController = findNavController()
+
+
         binding.ivSpeechToText.setOnClickListener {
             val action = HomeFragmentDirections.actionNavHomeToSpeechtotext(
                 "English",

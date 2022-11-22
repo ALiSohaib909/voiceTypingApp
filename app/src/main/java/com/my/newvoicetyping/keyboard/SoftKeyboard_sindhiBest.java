@@ -26,15 +26,24 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+
+import com.my.newvoicetyping.Appmainactivity;
 import com.my.newvoicetyping.R;
+import com.my.newvoicetyping.ui.Themes.ThemeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//import github.ankushsachdeva.emojicon.EmojiconGridView;
-//import github.ankushsachdeva.emojicon.EmojiconsPopup;
-//import github.ankushsachdeva.emojicon.emoji.Emojicon;
+import github.ankushsachdeva.emojicon.EmojiconGridView;
+import github.ankushsachdeva.emojicon.emoji.Emojicon;
+
+import github.ankushsachdeva.emojicon.EmojiconGridView;
+import github.ankushsachdeva.emojicon.EmojiconsPopup;
+import github.ankushsachdeva.emojicon.emoji.Emojicon;
 
 @SuppressLint("NewApi")
 public class SoftKeyboard_sindhiBest extends InputMethodService implements
@@ -67,15 +76,14 @@ public class SoftKeyboard_sindhiBest extends InputMethodService implements
     private int keyCount = R.layout.keytheme_1;
     private int lngCode = 0x0;
 
-/*
-    private int themes[] = {R.drawable.bg1, R.drawable.bg2, R.drawable.bg3,
-            R.drawable.bg4, R.drawable.bg5, R.drawable.bg6,
-            R.drawable.bg7, R.drawable.bg8, R.drawable.bg9, R.drawable.bg10, R.drawable.bg11, R.drawable.bg12,
-            R.drawable.bg13, R.drawable.bg14, R.drawable.bg15, R.drawable.bg16,
-            R.drawable.bg17, R.drawable.bg18, R.drawable.bg19, R.drawable.bg20, R.drawable.bg21, R.drawable.bg22, R.drawable.bg23,
-            R.drawable.bg24, R.drawable.bg25
+    private int theme = R.drawable.bg_keyboard_white;
+    private int shirtKey[] = {R.drawable.board_theme_white, R.drawable.board_theme__black,
+            R.drawable.board_theme_aqua, R.drawable.board_theme__red, R.drawable.board_theme_green,
+            R.drawable.board_theme_meroon, R.drawable.board_theme_pink, R.drawable.board_theme_dark_green,
+            R.drawable.board_theme_purple, R.drawable.board_theme_yellow, R.drawable.board_theme_blue,
+            R.drawable.board_theme_12, R.drawable.board_theme_13, R.drawable.board_theme_14,
+            R.drawable.board_theme_15
     };
-*/
 
     Drawable mDrawableTheme;
 
@@ -102,7 +110,7 @@ public class SoftKeyboard_sindhiBest extends InputMethodService implements
             enSymbolsKeyboard, enSymbolsCKeyboard, smilykeyboard;
     private LatinKeyboard_sindhiBest emojiKeyboard, assending_order;
     /*edit for add emoji library*/
-    // EmojiconsPopup popup;
+    EmojiconsPopup popup;
 
     // private boolean isLandscape = false;
     // private boolean isPortrait = false;
@@ -321,12 +329,28 @@ public class SoftKeyboard_sindhiBest extends InputMethodService implements
         }
     }
 
+/*
     private void themes() {
         editor = mSharedPreferences.edit();
-        setKbThemes(count);
-        editor.putInt("myTheme", count);
+          setKbThemes(count);
+
+           editor.putInt("myTheme", count);
+          editor.commit();
+        ////
+
+        if (theme < 15) {
+            theme++;
+            setKbThemes(shirtKey[theme]);
+            editor.putInt("myTheme", shirtKey[theme]);
+
+        } else {
+            theme = 0;
+            editor.putInt("myTheme", shirtKey[theme]);
+            setKbThemes(shirtKey[theme]);
+        }
         editor.commit();
     }
+*/
 
     private void setLandscapeKbThemes() {
         try {
@@ -896,9 +920,18 @@ public class SoftKeyboard_sindhiBest extends InputMethodService implements
             }
             /*edit for add emoji library*/
             else if (primaryCode == LatinKeyboardView_sindhiBest.KEYCODE_ALLEMOJI) {
-                //allemoji();
+               allemoji();
             } else if (primaryCode == LatinKeyboardView_sindhiBest.KEYCODE_THEMES) {
-                themes();
+                //  startActivity(this, ThemeFragment);
+         //       themes();
+               /* Intent intent = new Intent(getApplicationContext(), Appmainactivity.class);
+                intent.putExtra("key", "themeCheck");
+                getApplicationContext().startActivity(intent);*/
+                NavController nav = new NavController(getApplicationContext());
+                nav.findDestination(R.id.nav_host_fragment_content_appmainactivity);
+                nav.navigate(R.id.themeFragment);
+                Toast.makeText(this, "sadasdasd", Toast.LENGTH_SHORT).show();
+
             } else {
                 if (primaryCode >= 65 && primaryCode <= 90 && !mCapsLock) {
                     handleEngBack();
@@ -912,7 +945,38 @@ public class SoftKeyboard_sindhiBest extends InputMethodService implements
         }
 
     }
+    private void allemoji() {
+        this.popup.showAtBottom();
+        this.popup.setOnEmojiconClickedListener(new EmojiconGridView.OnEmojiconClickedListener() {
+            public void onEmojiconClicked(Emojicon paramAnonymousEmojicon) {
+                if (paramAnonymousEmojicon != null) {
+                    getCurrentInputConnection().commitText(mComposing + paramAnonymousEmojicon.getEmoji(), 1);
+                    mComposing.append(paramAnonymousEmojicon.getEmoji());
+                }
+            }
+        });
 
+        this.popup.setOnEmojiconBackspaceClickedListener(new EmojiconsPopup.OnEmojiconBackspaceClickedListener() {
+            public void onEmojiconBackspaceClicked(View paramAnonymousView) {
+                SoftKeyboard_sindhiBest.this.getCurrentInputConnection().sendKeyEvent(new KeyEvent(0L, 0L, 0, 67, 0, 0, 0, 0, 6));
+            }
+        });
+
+        this.popup.setOnSoftKeyboardOpenCloseListener(new EmojiconsPopup.OnSoftKeyboardOpenCloseListener() {
+            /*comment for stable emojis when press more then one mojis*/
+            public void onKeyboardClose() {
+
+					/*if (SoftKeyboard_sindhiBest.this.popup.isShowing()) {
+
+						SoftKeyboard_sindhiBest.this.popup.dismiss();
+					}*/
+            }
+
+            public void onKeyboardOpen(int paramAnonymousInt) {
+            }
+        });
+
+    }
     private void setting() {
         Intent intent = new Intent(SoftKeyboard_sindhiBest.this, PreferenceActivity_voicetyping.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -1048,7 +1112,6 @@ public class SoftKeyboard_sindhiBest extends InputMethodService implements
             setSuggestions(suggestions, null, true, true);
         } catch (Exception ignored) {
         }
-
     }
 
 
