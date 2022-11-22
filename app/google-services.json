@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "558985336651",
+    "project_id": "voice-typing-app-af24c",
+    "storage_bucket": "voice-typing-app-af24c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558985336651:android:7b1aa71919f2545ad77ace",
+        "android_client_info": {
+          "package_name": "com.my.newvoicetyping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558985336651-n0m4psj6oln4m2h7qhr7b9oi2hbp1hst.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my.newvoicetyping",
+            "certificate_hash": "61de6edc5a850c103032b3005b54ad006556211f"
+          }
+        },
+        {
+          "client_id": "558985336651-epci725gcmnng8d4svaprklv40j7k7kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC45_CzG8u6ol4EQkP2KeMq-IYI0VxS7vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558985336651-epci725gcmnng8d4svaprklv40j7k7kp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

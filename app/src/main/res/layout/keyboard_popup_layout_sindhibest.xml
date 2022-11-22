@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:orientation="horizontal">
+    <!--  android:paddingLeft="2dip"
+      android:paddingBottom="2dip"-->
+    <android.inputmethodservice.KeyboardView
+        android:id="@android:id/keyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:keyBackground="@drawable/key_background"
+        android:keyPreviewLayout="@layout/null_preview_sindhibest"
+        android:keyTextColor="#fff"
+        android:keyTextSize="24sp"
+        />
+    <!--android:layout_width="match_parent"-->
+    <ImageButton
+        android:id="@android:id/closeButton"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/ic_close_black" />
+    <!--  <ImageButton
+          android:id="@android:id/closeButton"
+          android:keyBackground="@drawable/key_background"
+          android:keyPreviewLayout="@laynull_preview_acview"
+          android:background="@color/colorPrimaryDark"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="8dp"
+          android:clickable="true"
+          android:src="@drawable/ic_close_black" />-->
+</LinearLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingLeft="2dip"
+        android:paddingBottom="2dip"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="button"
+            android:layout_gravity="bottom" />
+
+
+
+        <com.french.english.keyboard.LatinKeyboardView
+            android:id="@android:id/keyboardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:keyBackground="@drawable/key_background"
+            android:keyPreviewLayout="@laynull_preview_acview"
+            android:keyTextColor="#fff"
+            android:keyTextSize="22sp"
+            android:popupLayout="@laykeyboard_popup_layout_acyout" />
+    </LinearLayout>-->

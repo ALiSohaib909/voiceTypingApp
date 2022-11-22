@@ -1,0 +1,153 @@
+<resources>
+
+
+    <string name="ime_name">New Voice Typing Keyboard</string>
+    <string name="ime_service_name">Voice Typing Keyboard</string>
+    <string name="ime_name_preferences">Keyboard Settings</string>
+    <!-- Labels on soft keys -->
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+
+
+    <string name="app_name">Voice typing</string>
+    <string name="terms_of_user_privacy">Terms of User Privacy</string>
+    <string name="title_activity_user_exploreactivity">UserExploreactivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    //////
+    <string name="facebook_app_id">1303570666836639</string>
+    <string name="facebook_client_token">4f93ceda9e21fa9ce682303346abb5b4</string>
+    <string name="fb_login_protocol_scheme">fb1303570666836639</string>
+
+    <!-- Title for Latin keyboard  -->
+
+
+    <string name="applovin_banner">44982f1f6c5eb49a</string>
+    <string name="applovin_interstitial">7855467acdb20c3c</string>
+
+    <string name="LikeUs">Like Us</string>
+    <string name="RateUs">Rate Us</string>
+    <string name="ShareApp">Share App</string>
+    <string name="MoreApp">More App</string>
+    <string name="enable_keyboard">Enable Keyboard</string>
+    <string name="set_keyboard">Set Keyboard</string>
+    <string name="instruction_keyboard">Instructions</string>
+    <string name="setting_keyboard">Setting</string>
+    <string name="quit">Quit</string>
+    <string name="really_quit">Really Quit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!-- Symbols that are commonly considered word separators in this language -->
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+    <string name="special_separators">\u0020</string>
+    <!-- Labels on soft keys -->
+
+    <!-- Labels for subtype -->
+    <string name="label_subtype_generic">%s</string>
+    <string name="button_description">Emoticons Button</string>
+    <string name="chat_hint">Enter text here</string>
+    <string name="post">Post</string>
+    <string name="back">Back</string>
+    <!-- Titles for ImePreference -->
+    <string name="settings_name">AccenType Settings</string>
+    <string name="language_selection_title">Input languages</string>
+    <string name="select_language">Select input languages</string>
+    <string name="general_category">General</string>
+    <!-- Local model files -->
+    <string name="model_file_name">localmodel.at</string>
+    <!-- Preference files -->
+    <string name="preference_file_key">accentypepref</string>
+    <string name="preference_saved_language">savedlanguage</string>
+    <string name="language_vn">VN</string>
+    <string name="language_en">EN</string>
+    <!-- Labels on soft keys -->
+    <string name="label_accents">Specials</string>
+    <string name="symbols">123?</string>
+    <string name="label_symbols">Symbols</string>
+    <string name="label_letters">Letters</string>
+    <!--<string name="label_urdu">اردو</string>-->
+    <string name="husan_guftar">sys</string>
+    <string name="hindi">اُردُو</string>
+    <string name="label_english">abc</string>
+    <string name="label_digits">: ! ?</string>
+    <string name="label_eng">! # @</string>
+    <string name="eng_ime">My Voice Typing</string>
+    <string name="urdu_ime">Urdu</string>
+    <string name="vibrate_on_keys">Vibrate on a key when touched.</string>
+    <string name="sound_on_keys">Sound on a key when touched.</string>
+    <string name="autocomplate_words">Spacebar and punctuation automatically insert first word.</string>
+    <string name="show_prediction">Display suggested words while typing.</string>
+    <string name="sound">Sound On Key Press</string>
+    <string name="vibrate">Vibrate On Key Press</string>
+    <string name="autocompletion">Auto Complete</string>
+    <string name="prediction">Prediction</string>
+    <string name="set_input_ime">Set Sindhi Keyboard</string>
+    <string name="configure_imes">  STEP 1: Enable Sindhi Keyboard</string>
+    <string name="input_lang">  STEP 2: Set Sindhi keyboard</string>
+    <string name="general">  Voice Typing Keyboard Setting</string>
+    <string name="keys_preview">Show preview of the key that is touched.</string>
+    <string name="key_preview">Key Preview</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <!--    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+    <!--    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>-->
+    <!--    <string name="native_id">ca-app-pub-3940256099942544/2247696110</string>-->
+    <!--    <string name="open_ad_id">ca-app-pub-3940256099942544/3419835294</string>-->
+
+
+    <string name="app_id">ca-app-pub-3747520410546258~6769204044</string>
+    <string name="banner_id">ca-app-pub-3747520410546258/3951469017</string>
+    <string name="interstitial_id">ca-app-pub-3747520410546258/6386060664</string>
+    <string name="native_id">ca-app-pub-3747520410546258/7507570648</string>
+    <string name="open_ad_id">ca-app-pub-3747520410546258/8629080621</string>
+
+
+    <string name="fb_banner_id">1303570666836639_1303571266836579</string>
+    <string name="facebook_interstitial">1303570666836639_1303571413503231</string>
+    <string name="fb_native_id">1303570666836639_1303571513503221</string>
+    <string name="banner">44982f1f6c5eb49a</string>
+
+    <!--    <string name="fb_banner_id">YOUR_PLACEMENT_ID</string>-->
+    <!--    <string name="facebook_interstitial">YOUR_PLACEMENT_ID</string>-->
+    <!--    <string name="fb_native_id">YOUR_PLACEMENT_ID</string>-->
+
+    <string name="detailed_text">For more detail try this</string>
+    <string name="optin_yesbtn">OK</string>
+    <string name="link_text">Link</string>
+    <string name="optin_message">Do you agree with required terms and conditions?</string>
+    <string name="optin_text">Sindhi English Keyboard is full secure. we are not using any other permission.
+        We do not collect, store or transmit user personal and sensitive data/information For more details please visit our below link. Thank you.</string>
+    <string name="privacy_link">https://sites.google.com/site/privacypolicybestappsolution/home</string>
+    <string name="splash_title">Sindhi English Keyboard</string>
+
+    <string name="licence_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgm66jC2EzS6T9cmLEdWzWSEktXwMuTSBLd+Q1kA03OZa5ZXuHyNiDAHwNr4d6+0qqR31Bz1+/ZO8/mNI6Pc/nBx3nFiVaLjABaxsG3F4XH5B7PONKMyvGYEunzZC5dey1kNIZYbK0K55FFIkTH5XtoqJOUUvio7tsV0two9n+mR6k40LiTmSF+d1XKuOcz/y+fMOQtwqG5uSXFswlpqRRiVyC6yZwLF4A+qluj+0XL+VmI+gL7I5MRKg+j0mAmgNkPwV17EfHARvMx8RFZZBSb9UOzT8ixeSxQq3GyAPj+yEx1oPBLpDHhmh0isIKgdLHk/zfRc0/Bcsz3ZHEWfTrwIDAQAB</string>
+
+    <string name="product_id">allremoveads</string>
+
+    <!--    <string name="product_id">android.test.purchased</string>-->
+
+    <!--        <string name="licence_key"></string>-->
+
+    <string name="ad">Ad</string>
+    <string name="admob_ids">ad_ids</string>
+    <string name="title_activity_appmainactivity">Appmainactivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

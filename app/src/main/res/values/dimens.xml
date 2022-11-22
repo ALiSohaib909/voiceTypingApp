@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="keyboard_padding_top">5dp</dimen>
+    <dimen name="keyboard_padding_bottom">10dp</dimen>
+    <dimen name="vertical_correction">0dp</dimen>
+    <dimen name="key_height">45dip</dimen>
+    <dimen name="key_for_digit">35dip</dimen>
+    <dimen name="keyboard_height">230dip</dimen>
+    <dimen name="key_font_size">24sp</dimen>
+    <dimen name="key_preview_window_size">60sp</dimen>
+    <dimen name="candidate_font_height">18sp</dimen>
+    <dimen name="candidate_vertical_padding">20sp</dimen>
+    <dimen name="alternate_key_label_size">12sp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

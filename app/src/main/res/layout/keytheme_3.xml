@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.my.newvoicetyping.keyboard.LatinKeyboardView_sindhiBest  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/urduSimple"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:adjustViewBounds="true"
+    android:alpha="1"
+    android:imeOptions="actionSearch"
+    android:inputType="textShortMessage"
+    android:keyBackground="@drawable/keytheme3"
+    android:keyPreviewLayout="@layout/key_preview_sindhibest"
+    android:keyPreviewOffset="-4dp"
+    android:keyTextColor="@color/white"
+    android:paddingTop="4dp"
+    android:shadowRadius="0.0"
+    android:popupLayout="@layout/keyboard_popup_layout_sindhibest">
+</com.my.newvoicetyping.keyboard.LatinKeyboardView_sindhiBest>
+

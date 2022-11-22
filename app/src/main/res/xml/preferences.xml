@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ime_name_preferences">
+
+    <PreferenceCategory android:layout="@layout/action_bar_preferences">
+
+        <com.my.newvoicetyping.keyboard.BannerPreference android:key="banner_ad_pref" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefSound"
+
+            android:icon="@drawable/preferencespeaker"
+            android:summary="@string/sound_on_keys"
+            android:title="@string/sound" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefVibrate"
+            android:icon="@drawable/preferencevibrate"
+            android:summary="@string/vibrate_on_keys"
+            android:title="@string/vibrate" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefAutoComplate"
+            android:icon="@drawable/preferenceautocomplete"
+            android:summary="@string/autocomplate_words"
+            android:title="@string/autocompletion" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefKeyPreview"
+
+            android:icon="@drawable/preferencekeypreview"
+            android:summary="@string/keys_preview"
+            android:title="@string/key_preview" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefPrediction"
+            android:icon="@drawable/prefereceprediction"
+            android:summary="@string/show_prediction"
+            android:title="@string/prediction" />
+
+
+
+<!--        <com.sindhi.urdu.english.keybad.AdPreference_sindhiBest android:key="adsmain" />-->
+    </PreferenceCategory>
+</PreferenceScreen>

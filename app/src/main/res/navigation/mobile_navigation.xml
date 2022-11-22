@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.my.newvoicetyping.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_speechtotext"
+            app:destination="@id/speechtotext" />
+        <action
+            android:id="@+id/action_nav_home_to_dictionary"
+            app:destination="@id/dictionary" />
+        <action
+            android:id="@+id/action_nav_home_to_themeFragment2"
+            app:destination="@id/themeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speechtotext"
+        android:name="com.my.newvoicetyping.ui.Speechtotext.Speechtotext"
+        android:label="Speech To Text"
+        tools:layout="@layout/fragment_speechtotext" >
+        <argument
+            android:name="fromcountryname"
+            app:argType="string" />
+        <argument
+            android:name="fromcountryflag"
+            app:argType="integer" />
+        <argument
+            android:name="tocountryname"
+            app:argType="string" />
+        <argument
+            android:name="tocountryflag"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_speechtotext_to_fromcountry_fragment"
+            app:destination="@id/fromcountry_fragment" />
+        <action
+            android:id="@+id/action_speechtotext_to_tocountry_fragment"
+            app:destination="@id/tocountry_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fromcountry_fragment"
+        android:name="com.my.newvoicetyping.ui.Speechtotext.fromcountry_fragment"
+        android:label="Select Country"
+        tools:layout="@layout/fragment_fromcountry_fragment" >
+        <action
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/speechtotext"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_fromcountry_fragment_to_speechtotext"
+            app:destination="@id/speechtotext" />
+        <argument
+            android:name="tocountryname"
+            app:argType="string" />
+        <argument android:name="tocountryflag"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/tocountry_fragment"
+        android:name="com.my.newvoicetyping.ui.Speechtotext.tocountry_fragment"
+        android:label="fragment_tocountry_fragment"
+        tools:layout="@layout/fragment_tocountry_fragment" >
+        <action
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/speechtotext"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_tocountry_fragment_to_speechtotext"
+            app:destination="@id/speechtotext" />
+        <argument
+            android:name="fromcountryname"
+            app:argType="string" />
+        <argument
+            android:name="fromcountryflag"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/dictionary"
+        android:name="com.my.newvoicetyping.ui.Dictionary.Dictionary"
+        android:label="Dictionary" />
+    <fragment
+        android:id="@+id/themeFragment"
+        android:name="com.my.newvoicetyping.ui.Themes.ThemeFragment"
+        android:label="fragment_theme"
+        tools:layout="@layout/fragment_theme" />
+</navigation>
